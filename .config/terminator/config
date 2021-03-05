@@ -1,0 +1,32 @@
+[global_config]
+  focus = system
+  scroll_tabbar = True
+  always_on_top = True
+  title_inactive_bg_color = "#babdb6"
+  inactive_color_offset = 1.0
+[keybindings]
+  split_horiz = <Primary>Down
+  split_vert = <Primary>Right
+  hide_window = <Primary><Shift><Alt>a
+  edit_tab_title = <Primary><Alt>t
+[profiles]
+  [[default]]
+    background_darkness = 0.89
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Monospace 13
+    foreground_color = "#00ff00"
+    scrollback_lines = 1000
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1920, 500
+      position = 0:0
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
