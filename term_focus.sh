@@ -1,4 +1,4 @@
-#!/bin/bash                                                                                                            
+#!/bin/bash
 #
 # This script does this:
 # launch an app if it isn't launched yet,
@@ -42,6 +42,7 @@ fi
 # check if we're trying to use an app that needs a special process name
 # (because it runs multiple processes and/or under a different name)
 app=$1
+# echo $app
 if [[ $app == terminator ]]; then
   process_name=/usr/bin/terminator
 else
@@ -51,7 +52,7 @@ fi
 # Check if the app is running (in this case $process_name)
 
 #pid=$(pidof $process_name) # pidof didn't work for terminator
-pid=`pgrep -u naim terminal`
+pid=`pgrep terminator`
 
 # If it isn't launched, then launch
 
